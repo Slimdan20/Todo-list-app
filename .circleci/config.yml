@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  coveralls: coveralls/coveralls@2.2.5
+  coveralls: coveralls/coveralls@1.1.2
 jobs:
     test:
         docker:
