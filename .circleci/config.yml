@@ -14,8 +14,7 @@ jobs:
                   name: Run test with coverage
                   command: npm run test:coverage
 
-            - coveralls/upload:
-                  path: coverage/lcov.info 
+            - coveralls/upload
 
 workflows:
   test-and-coveralls:
