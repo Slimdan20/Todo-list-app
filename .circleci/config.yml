@@ -11,7 +11,7 @@ jobs:
                   name: Install dependencies
                   command: npm ci
             - run:
-                  name: Run tests with coverage
+                  name: Run test with coverage
                   command: npm run test:coverage
 
             - coveralls/upload:
