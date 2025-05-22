@@ -22,11 +22,15 @@ describe('Todo List App', () => {
     const input = screen.getByPlaceholderText(/add item/i);
     const button = screen.getByRole('button', { name: /add/i });
 
+    const initialItems = screen.queryAllByRole('listitem').length;
+
     await userEvent.type(input, '   ');  
 
     await userEvent.click(button);
 
-    expect(screen.queryByText('Write tests')).toBeNull();
+    const updatedItems = screen.queryAllByRole('listitem').length;
+
+    expect(updatedItems).toBe(initialItems);
   });
 });
 
